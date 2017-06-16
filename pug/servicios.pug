@@ -1,0 +1,59 @@
+extends layouts/layout.pug
+
+mixin producto-tab(name, link)
+	li.tab
+		a(href=link)=name
+		
+mixin content-item(name, link)
+	li
+		a(href=link)=name
+
+block body
+	#servicios
+		.row.no-margin
+			.col.s12
+				ul.tabs#productos-tabs
+					+producto-tab("Construcción Industrial", "#construccion")
+					+producto-tab("Gestión de Proyectos", "#gestion-proyectos")
+					+producto-tab("Gestión Inmobilaria", "#gestion-inmobilaria")
+					+producto-tab("Obra Civil", "#obra")
+					+producto-tab("Recubrimientos Industriales", "#recubrimientos")
+					+producto-tab("Renta de Andamio", "#renta-andamio")
+				
+					
+			.col.s12.black.white-text#construccion
+				h5.center-align Construcción Industrial
+				.row
+					.col.s12
+						p Lorem ipsum dolor sit amet.
+						
+			.col.s12.black.white-text#gestion-proyectos
+				h5.center-align Gestión de Proyectos
+				.row
+					.col.s12
+						p Lorem ipsum dolor sit amet.
+
+			
+			.col.s12.black.white-text#gestion-inmobilaria
+				h5.center-align Gestión Inmobilaria
+				.row
+					.col.s12
+						p Lorem ipsum dolor sit amet.
+		
+			.col.s12.black.white-text#obra
+				h5.center-align Obra Civil
+				.row
+					.col.s12
+						p Lorem ipsum dolor sit amet.
+		
+			.col.s12.black.white-text#recubrimientos
+				h5.center-align Recubrimientos
+				.row
+					.col.s12
+						p Lorem ipsum dolor sit amet.
+			
+			.col.s12.black.white-text#renta-andamio
+				h5.center-align Renta de Andamio
+				.row
+					.col.s12
+						p Lorem ipsum dolor sit amet.

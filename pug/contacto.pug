@@ -1,0 +1,47 @@
+extends layouts/layout.pug
+
+block body
+	div.row.margin-tb-m#contacto
+		h3.center-align ¡Contáctanos!
+		div.col.s12#mapa
+			script(type="text/javascript").
+				function initMap() {
+					var map = new google.maps.Map(document.getElementById('mapa'), {
+						center: {lat: 20.5888179, lng: -100.4196512},
+						scrollwheel: false,
+						zoom: 16
+					});
+				}
+				
+		div.col.s12.m6.padding-tb-xs#formulario
+			form
+				div.input-field.col.s10.offset-s1
+					i.material-icons.prefix account_circle
+					input.validate#input-nombre(type="text")
+					label(for="input-nombre") Nombre completo
+				div.input-field.col.s10.offset-s1
+					i.material-icons.prefix phone
+					input.validate#input-telefono(type="text")
+					label(for="input-telefono") Teléfono
+				div.input-field.col.s10.offset-s1
+					i.material-icons.prefix email
+					input.validate#input-correo(type="text")
+					label(for="input-correo") Correo electrónico
+				div.input-field.col.s10.offset-s1
+					i.material-icons.prefix comment
+					textarea.materialize-textarea#input-comentarios(type="text")
+					label(for="input-comentarios") Comentarios
+				div.col.s10.offset-s1
+					button.btn.waves-effect.waves-light(type="submit" name="")
+						i.material-icons.right send
+						| Enviar
+		div.col.s12.m6.padding-tb-xs#sociales
+			div.social-item
+				img(src="/img/fb-black.png")
+				a(href="#!" target="_blank") facebook.com
+			div.social-item
+				img(src="/img/phone-black.png")
+				span (442) 123 4567
+			div.social-item
+				img(src="/img/location-black.png")
+				span Jesús Oviedo Avendaño

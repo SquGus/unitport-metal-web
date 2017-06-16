@@ -1,0 +1,100 @@
+#index {
+
+	// Spacing in slides
+	.slide {
+		background-color: white;
+
+		.container {
+			width: 80%;
+		}
+	}
+
+	// Arrows for slides
+	.fp-controlArrow {
+		opacity: .5;
+
+		&.fp-prev {
+			left: 50px;
+			border-color: transparent white transparent transparent;
+		}
+
+		&.fp-next {
+			right: 50px;
+			border-color: transparent transparent transparent white;
+		}
+	}
+
+	#quienes-somos {
+	}
+
+	#slideshow .carousel {
+		height: calc(100vh - 104px) !important;
+
+		.description {
+			position: absolute;
+			width: 100%;
+			margin: auto 0;
+			top: 3.25rem;
+		}
+	}
+
+	#empresa {
+		.col {
+			padding: 0 4.75rem;
+
+			@media only screen and (min-width: 992px) {
+				&:last-child {
+					border-left: .25rem solid $primary-color;
+				}
+			}
+		}
+
+		h5 {
+			line-height: 2.5rem;
+		}
+	}
+
+	#valores {
+		height: auto;
+
+		.value-item {
+
+			.row {
+				padding: 2rem;
+				border: .25rem solid white;
+				@media only screen and (min-width: 992px) {
+					min-height: 225px;
+				}
+			}
+
+			.white-block {
+				height: .15rem;
+				width: 2.5rem;
+				border: .15rem solid white;
+				margin: .75rem auto;
+			}
+
+			.value-description {
+				font-size: 1.25rem;
+			}
+		}
+	}
+
+	#contacto {
+		#sociales .social-item {
+			margin-top: 1.5rem;
+			display: flex;
+			align-items: center;
+
+			img {
+				width: 2rem;
+				height: 2rem;
+			}
+
+			span, a {
+				color: black;
+				padding-left: 1rem;
+			}
+		}
+	}
+}

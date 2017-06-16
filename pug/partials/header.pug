@@ -1,0 +1,23 @@
+header
+	.navbar-fixed
+		nav
+			.nav-wrapper
+				a.brand-logo(href="index.html" height="10")
+					img(src="img/logo.png")
+				a.button-collapse(href="#!" data-activates="mobile-nav")
+					i.material-icons menu
+				mixin nav-item(cl, link, name)
+					li(class=cl)
+						a.uppercase(href=link)=name
+				ul.right.hide-on-med-and-down
+					+nav-item("index-tab", "index.html", "Inicio")
+					+nav-item("productos-tab", "productos.html", "Productos")
+					+nav-item("servicios-tab", "servicios.html", "Servicios")
+					+nav-item("nosotros-tab", "nosotros.html", "Nosotros")
+					+nav-item("contacto-tab", "contacto.html", "Contacto")
+				ul.side-nav#mobile-nav
+					+nav-item("index-tab", "index.html", "Inicio")
+					+nav-item("productos-tab", "productos.html", "Productos")
+					+nav-item("servicios-tab", "servicios.html", "Servicios")
+					+nav-item("nosotros-tab", "nosotros.html", "Nosotros")
+					+nav-item("contacto-tab", "contacto.html", "Contacto")

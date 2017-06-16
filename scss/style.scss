@@ -1,0 +1,232 @@
+$primary-color: #00838f !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+
+@mixin margin-all($size) {
+	margin : $size !important;
+}
+
+@mixin margin-top-bottom($size) {
+	margin-top: $size !important;
+	margin-bottom: $size !important;
+}
+
+@mixin margin-right-left($size) {
+	margin-right: $size !important;
+	margin-left: $size !important;
+}
+
+@mixin padding-all($size) {
+	padding : $size !important;
+}
+
+@mixin padding-top-bottom($size) {
+	padding-top: $size !important;
+	padding-bottom: $size !important;
+}
+
+@mixin padding-right-left($size) {
+	padding-right: $size !important;
+	padding-left: $size !important;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.primary-text {
+	color: $primary-color;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.margin {
+	&-xs {
+		@include margin-all(1rem);
+	}
+	&-s {
+		@include margin-all(1.75rem);
+	}
+	&-m {
+		@include margin-all(2.5rem);
+	}
+	&-l {
+		@include margin-all(3.25rem);
+	}
+	&-xl {
+		@include margin-all(4rem);
+	}
+
+	&-tb {
+		&-xs {
+			@include margin-top-bottom(1rem);
+		}
+		&-s {
+			@include margin-top-bottom(1.75rem);
+		}
+		&-m {
+			@include margin-top-bottom(2.5rem);
+		}
+		&-l {
+			@include margin-top-bottom(3.25rem);
+		}
+		&-xl {
+			@include margin-top-bottom(4rem);
+		}
+	}
+
+	&-rl {
+		&-xs {
+			@include margin-right-left(1rem);
+		}
+		&-s {
+			@include margin-right-left(1.75rem);
+		}
+		&-m {
+			@include margin-right-left(2.5rem);
+		}
+		&-l {
+			@include margin-right-left(3.25rem);
+		}
+		&-xl {
+			@include margin-right-left(4rem);
+		}
+	}
+
+	&-b {
+		&-m {
+			margin-bottom: 2.5rem;
+		}
+	}
+}
+
+.padding {
+	&-xs {
+		@include padding-all(1rem);
+	}
+	&-s {
+		@include padding-all(1.75rem);
+	}
+	&-m {
+		@include padding-all(2.5rem);
+	}
+	&-l {
+		@include padding-all(3.25rem);
+	}
+	&-xl {
+		@include padding-all(4rem);
+	}
+
+	&-tb {
+		&-xs {
+			@include padding-top-bottom(1rem);
+		}
+		&-s {
+			@include padding-top-bottom(1.75rem);
+		}
+		&-m {
+			@include padding-top-bottom(2.5rem);
+		}
+		&-l {
+			@include padding-top-bottom(3.25rem);
+		}
+		&-xl {
+			@include padding-top-bottom(4rem);
+		}
+	}
+
+	&-rl {
+		&-xs {
+			@include padding-right-left(1rem);
+		}
+		&-s {
+			@include padding-right-left(1.75rem);
+		}
+		&-m {
+			@include padding-right-left(2.5rem);
+		}
+		&-l {
+			@include padding-right-left(3.25rem);
+		}
+		&-xl {
+			@include padding-right-left(4rem);
+		}
+	}
+}
+
+.navbar-fixed {
+	position: fixed;
+	z-index: 1000;
+	height: 104px;
+
+	nav {
+		border-top: 20px solid white;
+		border-bottom: 20px solid white;
+		height: 104px;
+		line-height: 50px;
+
+		ul li {
+			margin-top: 7px;
+			margin-bottom: 7px;
+
+			&.active {
+				background-color: transparent;
+				border-bottom: 3px solid white;
+			}
+		}
+
+		.brand-logo {
+			height: 64px;
+
+			img {
+				margin-top: -20px;
+				height: 104px;
+				background-color: white;
+				border-radius: 50%;
+				padding: 10px;
+
+				@media only screen and (min-width: 993px) {
+					margin-left: 50px;
+				}
+			}
+		}
+
+		.button-collapse i {
+			height: 64px;
+			line-height: 64px;
+		}
+	}
+}
+
+#mapa {
+	height: 450px;
+	background-color: $primary-color;
+}
+
+@import 'index';
+@import 'productos';
+@import 'servicios';
+@import 'nosotros';

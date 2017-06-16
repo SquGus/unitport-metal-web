@@ -1,0 +1,21 @@
+#servicios {
+	margin-top: 104px;
+
+	.tabs-content {
+		height: calc(100vh - 152px) !important;
+
+		.carousel-item {
+			height: 100%;
+			overflow-x: scroll;
+		}
+	}
+
+	.collapsible-header {
+		// border-radius: 10px;
+	}
+
+	.collapsible-body {
+		border-bottom: 0;
+	}
+
+}

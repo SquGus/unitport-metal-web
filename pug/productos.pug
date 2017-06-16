@@ -1,0 +1,201 @@
+extends layouts/layout.pug
+
+//- mixin categoria-item-odd(name, photo)
+//- 	.col.s12.m6.l4.offset-l2.center-align.categoria-item
+//- 		.container
+//- 			img.responsive-img(src=photo)
+//- 			h5.primary-text=name
+//- 		
+//- mixin categoria-item-even(name, photo)
+//- 	.col.s12.m6.l4.center-align.categoria-item
+//- 		.container
+//- 			img.responsive-img(src=photo)
+//- 			h5.primary-text=name
+//- 			
+mixin producto-tab(name, link)
+	li.tab
+		a(href=link)=name
+		
+mixin content-item(name, link)
+	li
+		a(href=link)=name
+
+block body
+	#productos
+		.row.no-margin
+			.col.s12
+				ul.tabs.tabs-fixed-width#productos-tabs
+					+producto-tab("Acero Inoxidable", "#acero")
+					+producto-tab("Andamio", "#andamio")
+					+producto-tab("Comerciales", "#comerciales")
+					+producto-tab("Estructurales", "#estructurales")
+					+producto-tab("Planos", "#planos")
+					+producto-tab("Rejilla", "#rejilla")
+					+producto-tab("Tubos", "#tubos")
+					+producto-tab("Otros", "#otros")
+				
+			.col.s12.black.white-text#acero
+				h5.center-align Acero Inoxidable
+				.row
+					.col.s12
+						p Lorem ipsum dolor sit amet.
+				
+			.col.s12.black.white-text#andamio
+				h5.center-align Andamio
+				.row
+					.col.s12
+						p Lorem ipsum dolor sit amet.
+			
+			.col.s12.black.white-text#comerciales
+				h5.center-align Comerciales
+				.row
+					.col.s12
+						ul.collapsible.popout(data-collapsible="accordion")
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Ángulos
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Cuadrados y redondos
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Soleras
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+			
+			.col.s12.black.white-text#estructurales
+				h5.center-align Estructurales
+				.row
+					.col.s12
+						ul.collapsible.popout(data-collapsible="accordion")
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Viga IPS
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Viga IPR
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Cuadrados y rectángulos
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Perfiles estructurales
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Canales U (CPS)
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+			
+			.col.s12.black.white-text#planos
+				h5.center-align Planos
+				.row
+					.col.s12
+						ul.collapsible.popout(data-collapsible="accordion")
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Lam. Antiderrapante
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Lam. Galvanizada y pintada
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Lam. Rolada en caliente y frío
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Placa de grado
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+				
+			.col.s12.black.white-text#rejilla
+				h5.center-align Rejilla
+				.row
+					.col.s12
+						p Rejilla industrial. Lorem ipsum dolor sit amet.
+				
+			.col.s12.black.white-text#tubos
+				h5.center-align Tubos
+				.row
+					.col.s12
+						ul.collapsible.popout(data-collapsible="accordion")
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Cold rolled
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Tubería de cédula
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Tubería de cédula 30
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Tubería de cédula 40
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Tubería de cédula 80
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+							li
+								.collapsible-header.black-text
+									i.material-icons filter_drama
+									| Tubo industrial
+								.collapsible-body
+									span Lorem ipsum dolor sit amet.
+				
+			.col.s12.black.white-text#otros
+				h5.center-align Otros
+				.row
+					.col.s12
+						p Otros. Lorem ipsum dolor sit amet.
+	//- 	.row.padding-tb-l.no-margin#productos-categorias
+	//- 		//.parallax
+	//- 			img(src="/img/blur3.png")
+	//- 		h3.white-text.center-align Productos
+	//- 		+categoria-item-odd("Acero inoxidable1", "/img/blur1.png")
+	//- 		+categoria-item-even("Acero inoxidable2", "/img/blur1.png")
+	//- 		+categoria-item-odd("Acero inoxidable3", "/img/blur1.png")
+	//- 		+categoria-item-even("Acero inoxidable4", "/img/blur1.png")
+	//- 		+categoria-item-odd("Acero inoxidable5", "/img/blur1.png")
+	//- 		+categoria-item-even("Acero inoxidable6", "/img/blur1.png")

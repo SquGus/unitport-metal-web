@@ -1,0 +1,91 @@
+extends layouts/layout.pug
+
+mixin carousel-item(link, photo, text)
+	.carousel-item.white-text(href=link)
+		img(src=photo)
+		.description
+			h2 TEST
+			p.white-text=text
+
+mixin value-item(value, text)
+	.col.s12.l6.padding-rl-m.value-item
+		.row
+			h5.uppercase.white-text.center-align=value
+			.white-block
+			.col.s12.white-text.center-align.value-description=text
+	
+mixin slide(title, text)
+	.slide
+		.content.center-align
+			h3=title
+
+block body
+	#index
+		#fullpage
+			.section#quienes-somos
+				.slide.black
+					.container.white-text
+						h3.uppercase.grey-text ¿Quiénes somos?
+						h5 En 
+							strong UnitPort Metal
+							|  somos una empresa joven 100% mexicana enfocada en la producción, comercialización y provisión de Acero abarcando diversas ramas de la industria, teniendo como objetivo cumplir con los estándares de calidad y servicio requeridos para así garantizar la satisfacción de nuestros clientes y así mismo proveer soluciones integrales de valor agregado en productos de acero y servicios relacionados.
+				.slide.black
+					.content.center-align
+			.section
+				.row.margin-tb-l#empresa
+					.col.s12.m6#mision
+						h3.uppercase.center-align Misión
+						h5.center-align
+							strong.cyan-text Innovar
+							|  en procesos con soluciones integrales, proveer una gama de productos industriales de 
+							strong.cyan-text alta calidad
+							| , y mejorar continuamente con el propósito firme de atender las necesidades de nuestros clientes nacionales y en el extranjero.
+					.col.s12.m6#vision
+						h3.uppercase.center-align Visión
+						h5.center-align
+							| Ser líderes a nivel nacional e internacional, con el respaldo de socios clave, el 
+							strong.cyan-text compromiso
+							|  de reducir los costos por medio de servicios de importación de productos y materias primas y ser esenciales en la 
+							strong.cyan-text globalización
+							|  y competitividad.
+			.section
+				.row.padding-l.parallax-container#valores
+					.parallax
+						img(src="/img/blur3.png")
+					h3.uppercase.white-text.center-align.margin-b-m Valores
+					+value-item("Calidad", "Cada uno de nuestros productos son duraderos y de la mejor calidad que existe en el mercado")
+					+value-item("Compromiso", "Hacemos crecer la empresa cada día, y nuestros trabajos están hechos con pasión")
+					+value-item("Empatía", "La empatía con nuestros socios clave es esencial para nosotros, por eso siempre estamos abiertos a escuchar sus opiniones y llegar a acuerdos comunes que nos hagan crecer a ambas partes")
+					+value-item("Innovación", "Somos una empresa que siempre está creciendo, por lo tanto siempre estamos innovando en servicios y productos que mejoren el servicio que les damos a nuestros clientes")
+			.section
+				include partials/contacto.pug
+	
+	//#index
+		.row#slideshow
+			.carousel.carousel-slider.center(data-indicators="true")
+				.carousel-fixed-item.center
+					a.btn.btn-large.waves-effect.white.grey-text.darken-text-2(href="#!") ¡Contáctanos!
+				+carousel-item("#!", "/img/blur1.png", "test 1")
+				+carousel-item("#!", "/img/blur2.png", "test 2")
+				+carousel-item("#!", "/img/blur3.png", "test 3")
+
+block append scripts
+	script(type="text/javascript").
+		$(function() {
+			$('#fullpage').fullpage({
+				navigation: true,
+				paddingTop: '104px',
+				paddingBottom: '0',
+				scrollOverflow: true,
+			});
+			
+			$('.carousel.carousel-slider').carousel({
+				fullWidth: true,
+				indicators: true
+			});
+			
+			window.setInterval(function(e){
+				$('.carousel').carousel('next')
+			}, 5000);
+			
+		});

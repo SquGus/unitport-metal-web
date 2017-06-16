@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>UnitPort Metal</title>
+    <meta name="description" content="UnitPort Metal descripción">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/jquery.fullpage.min.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+    <!--
+    [if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]
+    
+    -->
+    <!-- Add your site or application content here-->
+    <header>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper"><a class="brand-logo" href="index.html" height="10"><img src="img/logo.png"></a><a class="button-collapse" href="#!" data-activates="mobile-nav"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                          <li class="index-tab"><a class="uppercase" href="index.html">Inicio</a></li>
+                          <li class="productos-tab"><a class="uppercase" href="productos.html">Productos</a></li>
+                          <li class="servicios-tab"><a class="uppercase" href="servicios.html">Servicios</a></li>
+                          <li class="nosotros-tab"><a class="uppercase" href="nosotros.html">Nosotros</a></li>
+                          <li class="contacto-tab"><a class="uppercase" href="contacto.html">Contacto</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-nav">
+                          <li class="index-tab"><a class="uppercase" href="index.html">Inicio</a></li>
+                          <li class="productos-tab"><a class="uppercase" href="productos.html">Productos</a></li>
+                          <li class="servicios-tab"><a class="uppercase" href="servicios.html">Servicios</a></li>
+                          <li class="nosotros-tab"><a class="uppercase" href="nosotros.html">Nosotros</a></li>
+                          <li class="contacto-tab"><a class="uppercase" href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="row margin-tb-m" id="contacto">
+        <h3 class="center-align">¡Contáctanos!</h3>
+        <div class="col s12" id="mapa">
+          <script type="text/javascript">
+            function initMap() {
+            	var map = new google.maps.Map(document.getElementById('mapa'), {
+            		center: {lat: 20.5888179, lng: -100.4196512},
+            		scrollwheel: false,
+            		zoom: 16
+            	});
+            }
+            
+          </script>
+        </div>
+        <div class="col s12 m6 padding-tb-xs" id="formulario">
+          <form>
+            <div class="input-field col s10 offset-s1"><i class="material-icons prefix">account_circle</i>
+              <input class="validate" id="input-nombre" type="text">
+              <label for="input-nombre">Nombre completo</label>
+            </div>
+            <div class="input-field col s10 offset-s1"><i class="material-icons prefix">phone</i>
+              <input class="validate" id="input-telefono" type="text">
+              <label for="input-telefono">Teléfono</label>
+            </div>
+            <div class="input-field col s10 offset-s1"><i class="material-icons prefix">email</i>
+              <input class="validate" id="input-correo" type="text">
+              <label for="input-correo">Correo electrónico</label>
+            </div>
+            <div class="input-field col s10 offset-s1"><i class="material-icons prefix">comment</i>
+              <textarea class="materialize-textarea" id="input-comentarios" type="text"></textarea>
+              <label for="input-comentarios">Comentarios</label>
+            </div>
+            <div class="col s10 offset-s1">
+              <button class="btn waves-effect waves-light" type="submit" name=""><i class="material-icons right">send</i>Enviar</button>
+            </div>
+          </form>
+        </div>
+        <div class="col s12 m6 padding-tb-xs" id="sociales">
+          <div class="social-item"><img src="/img/fb-black.png"><a href="#!" target="_blank">facebook.com</a></div>
+          <div class="social-item"><img src="/img/phone-black.png"><span>(442) 123 4567</span></div>
+          <div class="social-item"><img src="/img/location-black.png"><span>Jesús Oviedo Avendaño</span></div>
+        </div>
+      </div>
+    </main>
+    <!--include ../partials/footer.pug-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script> window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>
+    <script src="js/vendor/scrolloverflow.min.js"></script>
+    <script src="js/vendor/jquery.fullpage.min.js"></script>
+    <script src="js/vendor/jquery.fullpage.extensions.min.js"></script>
+    <script src="js/vendor/materialize.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlGjaAFrFmXFnMALhS3j-Nai2BrifDqoc&amp;callback=initMap" async defer></script>
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.-->
+    <script> window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date; ga('create','UA-XXXXX-Y','auto');ga('send','pageview')</script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  </body>
+</html>
